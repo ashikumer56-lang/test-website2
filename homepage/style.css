@@ -1,0 +1,139 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    color: #fff;
+}
+
+/* Wrapper for Sticky Footer Layout */
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    background-color: #222;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header h1 {
+    margin-left: 20px;
+    font-size: 1.8rem;
+}
+
+nav {
+    margin-right: 20px;
+}
+
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 12px;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+nav a:hover {
+  color: #1abc9c;
+  transform: translateY(-2px);
+}
+
+
+/* Main Section with Background Image */
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    text-align: center;
+    background: url('https://pikwizard.com/pw/medium/84b3c53afa2eb573eda03dcb100c0b57.jpg') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+main h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+main p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 1rem;
+}
+
+/* Call to Action Button */
+.cta-button {
+    display: inline-block;
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #45a049;
+}
+
+/* Footer */
+footer {
+    background-color: #eee;
+    color: #333;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+}
+
+.hero {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto 20px auto;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 12px;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+nav a:hover {
+  color: #1abc9c;
+  transform: translateY(-2px);
+}
+
+
+/* Navbar Button Style */
+
+.navbar-button {
+  background: transparent;
+  border: 2px solid #1abc9c;
+  color: #1abc9c;
+  padding: 6px 14px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  margin-left: 12px;
+}
+
+.navbar-button:hover {
+  background-color: #1abc9c;
+  color: #fff;
+}

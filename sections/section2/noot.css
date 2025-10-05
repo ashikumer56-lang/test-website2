@@ -1,0 +1,278 @@
+/* cards.css - Styles for Nootropics List Page */
+
+/* Ensure this file is linked after style.css in nootropics.html */
+
+/* Wrapper with wallpaper */
+.list-page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: url('images/neuro-wallpaper.jpg') center/cover no-repeat;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+/* Section header */
+.nootropic-header {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: rgba(30, 30, 30, 0.85);
+  border-bottom: 1px solid #333;
+}
+
+.nootropic-header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.nootropic-header p {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+/* Grid layout: 5 columns x 2 rows */
+.nootropics-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.5rem;
+  padding: 2rem;
+  flex: 1;
+  /* push footer down */
+  background-color: rgba(18, 18, 18, 0.8);
+}
+
+/* Individual card styling */
+.nootropic-card {
+  background: linear-gradient(145deg, #1f1f1f, #111111);
+  border: 2px solid #333;
+  border-radius: 16px;
+  padding: 1rem;
+  position: relative;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.nootropic-card:hover {
+  transform: translateY(-6px);
+  border-color: #00ffcc;
+}
+
+/* Star badge */
+.card-badge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background-color: #333;
+  padding: 4px 6px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  color: #fff;
+}
+
+/* Titles and text */
+.nootropic-card h2 {
+  font-size: 1.2rem;
+  margin: 1.2rem 0 0.6rem;
+  color: #00ffcc;
+}
+
+.nootropic-card p {
+  font-size: 0.9rem;
+  color: #ddd;
+  margin: 0.3rem 0;
+}
+
+/* Power level */
+.power-level {
+  margin: 0.75rem 0;
+  font-weight: bold;
+}
+
+.power-level span {
+  margin-left: 0.5rem;
+}
+
+/* Read More button */
+.read-more-button {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 8px 12px;
+  background-color: #00b386;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.read-more-button:hover {
+  background-color: #009973;
+}
+
+/* Footer styling */
+footer {
+  margin-top: auto;
+  text-align: center;
+  padding: 1rem;
+  background-color: #fff;
+  color: #333;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .nootropics-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .nootropics-grid {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .nootropics-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .nootropic-card {
+    padding: 0.8rem;
+  }
+
+  .nootropic-card h2 {
+    font-size: 1rem;
+  }
+
+  .nootropic-card p,
+  .power-level {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .nootropics-grid {
+    grid-template-columns: 1fr;
+    padding: 0.8rem;
+  }
+
+  .nootropic-card {
+    padding: 0.75rem;
+  }
+
+  .nootropic-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .nootropic-header p {
+    font-size: 0.9rem;
+  }
+
+}
+
+/* Next Section Button */
+.next-section-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #00b386;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 12px;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  z-index: 1000;
+}
+
+.next-section-button:hover {
+  background-color: #009973;
+  transform: scale(1.05);
+}
+
+/* Close the first media query */
+@media (max-width: 480px) {
+  .next-section-button {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+    bottom: 15px;
+    right: 15px;
+  }
+}
+
+/* ← Make sure this brace is here! */
+
+/* Back to Home (dic) Button */
+.dic {
+  display: inline-block;
+  padding: 10px 16px;
+  background-color: #00b386;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 12px;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.dic:hover {
+  background-color: #009973;
+  transform: scale(1.05);
+}
+
+/* Responsive tweak for small screens */
+@media (max-width: 480px) {
+  .dic {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+}
+
+/* ---------------------------
+   Prev Section floating button
+   Add at the very end of cards.css / noot.css
+   --------------------------- */
+.prev-section-button {
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: linear-gradient(180deg, #2f8de4 0%, #2b78d1 100%);
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  z-index: 1200;
+  transition: transform .12s ease, box-shadow .12s ease, opacity .12s ease;
+}
+
+.prev-section-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.38);
+  opacity: 0.98;
+}
+
+.prev-section-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 6px rgba(45, 116, 255, 0.12), 0 12px 26px rgba(0, 0, 0, 0.35);
+}
+
+/* small-screen tweak */
+@media (max-width:600px) {
+  .prev-section-button {
+    left: 12px;
+    bottom: 14px;
+    padding: 8px 12px;
+    border-radius: 10px;
+    font-size: 0.95rem;
+  }
+}

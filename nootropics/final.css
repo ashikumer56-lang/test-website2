@@ -1,0 +1,374 @@
+/* === GLOBAL RESET === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* === BASE === */
+body {
+  font-family: 'Inter', sans-serif;
+  background: #eaf4f8;
+  /* Matching side color */
+  color: #333;
+  line-height: 1.7;
+  font-size: 1rem;
+  background: linear-gradient(to bottom, #eaf4f8, #ffffff);
+}
+
+/* ---------------------------
+   Compound page top navigation
+   --------------------------- */
+.compound-top-nav {
+  display: flex;
+  gap: 0.6rem;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  background: rgba(0, 0, 0, 0.03);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  position: sticky;
+  top: 0;
+  z-index: 1200;
+}
+
+/* make top-nav buttons smaller than main .btn but reuse base .btn rules */
+.compound-top-nav .btn {
+  padding: 0.45rem 0.9rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  font-size: 0.95rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+/* color tokens aligned to your theme */
+.compound-top-nav .btn-back-section {
+  background: #eef6ff;
+  color: #043a66;
+}
+
+.compound-top-nav .btn-home {
+  background: #fff4e6;
+  color: #5a3a00;
+}
+
+/* === LINKS === */
+a {
+  text-decoration: none;
+  color: #0066cc;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* === HEADER === */
+.site-header {
+  background-color: #ADD8E6;
+  padding: 2.5rem 1rem;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.site-header h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 0.5rem;
+}
+
+.site-header .subtitle {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #333;
+}
+
+/* === LAYOUT === */
+.container {
+  max-width: 1600px;
+  margin: 2rem auto;
+  padding: 2rem 3rem;
+  /* increased side padding for wider screens */
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+}
+
+
+.layout {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.content {
+  flex: 1;
+}
+
+.sidebar {
+  width: 280px;
+}
+
+.sidebar img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* === HERO === */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.hero-img {
+  width: 100%;
+  border-radius: 16px;
+  object-fit: cover;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.hero-text h2 {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  font-size: 1.05rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+/* === SECTIONS === */
+.section {
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #e2e2e2;
+}
+
+.section:last-of-type {
+  border-bottom: none;
+}
+
+.section h3 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.section h3::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 60px;
+  height: 4px;
+  background: #0066cc;
+  border-radius: 2px;
+}
+
+.section p,
+.section ul,
+.section ol,
+.section table {
+  margin-top: 1.2rem;
+  color: #444;
+}
+
+/* === LISTS === */
+.section ul {
+  list-style: disc inside;
+  padding-left: 1rem;
+}
+
+.section ul li {
+  margin-bottom: 0.75rem;
+}
+
+.section ol {
+  padding-left: 1.5rem;
+}
+
+.section ol li {
+  margin-bottom: 0.75rem;
+}
+
+/* === IMAGES === */
+.inline-img {
+  width: 100%;
+  border-radius: 10px;
+  margin: 2rem 0;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* === TABLES === */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0 2rem;
+  font-size: 1rem;
+}
+
+table th,
+table td {
+  border: 1px solid #ddd;
+  padding: 0.75rem 1rem;
+  text-align: left;
+}
+
+table th {
+  background: #f0f0f0;
+  font-weight: 500;
+}
+
+/* === BUTTONS === */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: all 0.25s ease;
+  margin-right: 0.5rem;
+  margin-top: 1rem;
+}
+
+.btn-depot {
+  background: #28a745;
+}
+
+.btn-depot:hover {
+  background: #1e7e34;
+}
+
+.btn-amazon {
+  background: #FF9900;
+}
+
+.btn-amazon:hover {
+  background: #e68a00;
+}
+
+.btn-back {
+  background: #007BFF;
+}
+
+.btn-back:hover {
+  background: #0056b3;
+}
+
+/* === FOOTER === */
+.site-footer {
+  background-color: #ADD8E6;
+  color: #222;
+  text-align: center;
+  padding: 1.5rem;
+  font-weight: 300;
+  margin-top: 3rem;
+  font-size: 0.95rem;
+}
+
+/* === MOBILE (RESPONSIVE) === */
+@media (max-width: 992px) {
+  .layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    order: -1;
+    margin-bottom: 2rem;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .site-header h1 {
+    font-size: 2.25rem;
+  }
+
+  .section h3 {
+    font-size: 1.5rem;
+  }
+
+  .hero-text h2 {
+    font-size: 1.5rem;
+  }
+
+  /* 1) Make all <img> tags responsive */
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* 2) If you want to target only specific classes (e.g., hero, inline, sidebar), you can do: */
+  .hero-img,
+  .inline-img,
+  .sidebar img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* 3) Ensure your container padding/margins don’t force overflow */
+  .container {
+    box-sizing: border-box;
+    width: 100%;
+    padding-left: 1rem;
+    /* adjust as needed */
+    padding-right: 1rem;
+    /* adjust as needed */
+  }
+
+  /* 4) If you want the hero image to always fill its parent’s width */
+  .hero-img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* 5) For sidebar thumbnails, you can set a max-width or let them shrink */
+  .sidebar img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+
+  /* 6) If you need to override any default fixed widths */
+  img[width],
+  img[height] {
+    width: auto !important;
+    height: auto !important;
+  }
+
+  /* 7) Optional: ensure no horizontal scroll on small screens */
+  body,
+  html {
+    overflow-x: hidden;
+  }
+
+  /* Top-nav mobile adjustments */
+  .compound-top-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.45rem;
+    padding: 0.6rem;
+  }
+
+  .compound-top-nav .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
